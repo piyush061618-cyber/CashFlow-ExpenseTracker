@@ -1,0 +1,65 @@
+import React from 'react';
+import {
+  Briefcase,
+  Laptop,
+  TrendingUp,
+  PieChart,
+  Percent,
+  Gift,
+  MoreHorizontal,
+  Utensils,
+  ShoppingBag,
+  Plane,
+  Car,
+  GraduationCap,
+  Film,
+  HeartPulse,
+  Home,
+  Zap,
+  ShoppingCart,
+  Smartphone,
+  Calendar,
+  Smile,
+  Banknote,
+  Building2,
+  PiggyBank,
+  QrCode,
+  CreditCard,
+  Wallet as WalletIcon,
+  HelpCircle,
+} from 'lucide-react-native';
+
+const ICON_MAP: Record<string, any> = {
+  Briefcase,
+  Laptop,
+  TrendingUp,
+  PieChart,
+  Percent,
+  Gift,
+  MoreHorizontal,
+  Utensils,
+  ShoppingBag,
+  Plane,
+  Car,
+  GraduationCap,
+  Film,
+  HeartPulse,
+  Home,
+  Zap,
+  ShoppingCart,
+  Smartphone,
+  Calendar,
+  Smile,
+  Banknote,
+  Building2,
+  PiggyBank,
+  QrCode,
+  CreditCard,
+  Wallet: WalletIcon,
+};
+
+export function getCategoryIcon(name: string, size = 20, color = '#FFFFFF') {
+  const IconComponent = ICON_MAP[name] || HelpCircle;
+  return <IconComponent size={size} color={color} />;
+}
+
